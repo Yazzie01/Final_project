@@ -50,10 +50,35 @@
 
         <section id="contact">
             <h3>Join the Invasion!</h3>
+            <form>
+                <label for="fullName">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
+                <input type="text" name="fullName" id="fullName"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
+
+                <label for="myEmail">Email Address:<span class="required">*</spans></label>
+                <input type="email" name="myEmail" id="email"><p class="hidden">Please enter a valid email address</p>
+
+                <label for="myphone">Phone Number:<span class="required">*</span></label>
+                <input type="phone" name="myPhone" id="phone">
+
+                <fieldset>
+                    <legend>Preferred Method of Contact</legend>
+                    <input type="radio" name="prefEmail">
+                    <label for="prefEmail" id="Email">Email</label>
+
+                    <input type="radio" name="prefPhone">
+                    <label for="prefPhone" id="Phone">Phone</label>
+                </fieldset>
+
+                <label for="myComments" id="commentBox">Comments<span class="required">*</span></label>
+                <textarea name="myComments" id="myComments" rows="4" cols="40"></textarea>
+            
+                <input type="submit" id="submitForm" value="submit">
+            </form>
+                
 
         </section>
     </main>
-    <footer>
+    <footer class="footerStyles">
 
     </footer>
 
