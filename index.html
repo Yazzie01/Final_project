@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Kiara Yazzie"></meta>
-    <meta name="description" content="Final Project for Poster invasion website"></meta>
+    <meta name="author" content="Kiara Yazzie">
+    <meta name="description" content="Final Project for Poster invasion website">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheets" href="styles.css">
@@ -12,6 +12,7 @@
 </head>
 <body>
 <header>
+    <img src="images/PosterInvasion_logo.png" alt="">
     <h1>Poster Invasion</h1>
 </header>
     <main>
@@ -35,7 +36,7 @@
         </section>
 
         <section id="showcase">
-            <h3>Your One Stop Shop!</h3>
+            <h3>Your one stop Poster Shop!</h3>
                 <h4>All to Pieces</h4>
                 <img src="images/Allto_Pieces.png" alt="Pink, white, and teal poster with a fragmented statue reaching towards the sky">
                 <h4>Floating Tree</h4>
@@ -51,22 +52,23 @@
         <section id="contact">
             <h3>Join the Invasion!</h3>
             <form>
-                <label for="fullName">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
-                <input type="text" name="fullName" id="fullName"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
+                <label for="name">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
+                <input type="text" name="name" id="fullName"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
 
-                <label for="myEmail">Email Address:<span class="required">*</spans></label>
-                <input type="email" name="myEmail" id="email"><p class="hidden">Please enter a valid email address</p>
+                <label for="email">Email Address:<span class="required">*</span></label>
+                <input type="email" name="email" id="email"><p class="hidden">Please enter a valid email address</p>
 
-                <label for="myphone">Phone Number:<span class="required">*</span></label>
-                <input type="phone" name="myPhone" id="phone">
+                <label for="phone">Phone Number:<span class="required">*</span></label>
+                <input type="phone" name="phone" id="phone">
 
                 <fieldset>
                     <legend>Preferred Method of Contact</legend>
-                    <input type="radio" name="prefEmail">
+                    
                     <label for="prefEmail" id="Email">Email</label>
-
-                    <input type="radio" name="prefPhone">
+                    <input type="radio" name="email">
+                    
                     <label for="prefPhone" id="Phone">Phone</label>
+                    <input type="radio" name="prefPhone">
                 </fieldset>
 
                 <label for="myComments" id="commentBox">Comments<span class="required">*</span></label>
@@ -79,7 +81,8 @@
         </section>
     </main>
     <footer class="footerStyles">
-
+        <p>For Educational Purposes Only</p>
+        <p>Copyright &copy; GIT417 - Kiara Yazzie</p>
     </footer>
 
 </body>
