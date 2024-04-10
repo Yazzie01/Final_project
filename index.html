@@ -49,26 +49,33 @@
                 <img src="images/Where_Is_My_Mind.png" alt="A skull with a black background with text saying 'Where is my mind'">
         </section>
 
+        <section id="game">
+            <h3>Test your luck!</h3>
+            <p>Are you feeling lucky? Give us your best guess and if you guess correctly you win a mystery gift!</p>
+            <p>Enter a number 1 - 10</p><input type="text" name="randomNum" id="randomNum">
+            <button id="gamePlay">Try me!</button>
+        </section>
+
         <section id="contact">
             <h3>Join the Invasion!</h3>
             <form>
-                <label for="name">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
-                <input type="text" name="name" id="fullName"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
+                <label for="myname">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
+                <input type="text" name="myname" id="myname"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
 
-                <label for="email">Email Address:<span class="required">*</span></label>
-                <input type="email" name="email" id="email"><p class="hidden">Please enter a valid email address</p>
+                <label for="myemail">Email Address:<span class="required">*</span></label>
+                <input type="text" name="myemail" id="myemail"><p class="hidden">Please enter a valid email address</p>
 
-                <label for="phone">Phone Number:<span class="required">*</span></label>
-                <input type="phone" name="phone" id="phone">
+                <label for="myphone">Phone Number:<span class="required">*</span></label>
+                <input type="tel" name="myphone" id="myphone">
 
                 <fieldset>
                     <legend>Preferred Method of Contact</legend>
                     
-                    <label for="prefEmail" id="Email">Email</label>
-                    <input type="radio" name="email">
+                    <label for="email" class="email">Email</label>
+                    <input type="radio" id="email">
                     
-                    <label for="prefPhone" id="Phone">Phone</label>
-                    <input type="radio" name="prefPhone">
+                    <label for="phone" class="phone">Phone</label>
+                    <input type="radio" id="phone">
                 </fieldset>
 
                 <label for="myComments" id="commentBox">Comments<span class="required">*</span></label>
