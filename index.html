@@ -24,12 +24,13 @@
                 <li>Campuses</li>
                 <li>Artists</li>
                 <li>Jobs</li>
+                <li><a href="#top">top</a></li>
             </ul>
         </nav>
 </header>
-    <main>
+    <main id="main">
         <h2>We are here to invade your world! With ART!</h2>
-        <section id="intro">
+        <section id="about">
             <h3>We come in peace...literally</h3>
                 <p>Poster Invasion is a woman-owned social enterprise. 
                     We work with artists all over the world to bring their work to their generation in print form. 
@@ -107,40 +108,79 @@
                     <input type="text" name="userGuess" id="userGuess">
                     <button id="gamePlay">Try me!</button>
                 </form>
+                <section id="gameDisplay">
+                    <h4 class="hidden">Game Results</h4>
+                    <span id="gameMsg"></span>
+                    <span id="guess"></span>
+                    <span id="randomNum"></span>
+                </section>
             </div>
         </section>
 
         <section id="contact">
-            <h3>Join the Invasion!</h3>
-            <form>
-                <label for="myname">Full Name:<span class="required">*</span></label> <!--Add RegEx in Java-->
-                <input type="text" name="myname" id="myname"><p class="hidden">Full name must be at least five characters long</p><!--full Name Error-->
+                <div>
+                    <h3>Join the Invasion!</h3>
+                    <p>Wanna find out when the next pop will be? Interested in learning more about us? Or do you just want more posters to cover up that hole in your wall? 
+                        If so! Leave us a message, your contact, we swear we won't abduct you! Scouts honor!</p>
 
-                <label for="myemail">Email Address:<span class="required">*</span></label>
-                <input type="text" name="myemail" id="myemail"><p class="hidden">Please enter a valid email address</p>
+                    <section>
+                        <h4>Follow us on our instagram for more!</h4>
+                        <a href="https://www.instagram.com/poster_invasion/"><i class="fa-brands fa-instagram" style="color:black;"></i>&nbsp;@poster_invasion</a>
+                    </section>
+                    <form id="contactRob">
+                        <label for="fName">Full Name (first and last):<span class="required">*</span></label> <!--Add RegEx in Java-->
+                        <input type="text" name="fName" id="fName">
+                        <span id="fNameError" class="hide">First and Last Name are required</span><!--full Name Error-->
 
-                <label for="myphone">Phone Number:<span class="required">*</span></label>
-                <input type="tel" name="myphone" id="myphone">
+                        <label for="number">Phone Number:<span class="required" id="telReq">*</span></label>
+                        <input type="tel" name="number" id="number">
+                        <span id="telError" class="hide">Phone number is required</span>
 
-                <fieldset>
-                    <legend>Preferred Method of Contact</legend>
+                        <label for="email">Email Address:<span class="required" id="emailReq">*</span></label>
+                        <input type="email" name="email" id="email">
+                        <span id="emailError" class="hide">Phone number is required</span>
+                        
+                        <fieldset>
+                            <legend>Preferred Method of Contact</legend>
+                            <label for="prefPhone" class="custom-radio">
+                                <input type="radio" name="contact-pred" id="prefPhone" required checked>
+                                Phone
+                            </label>
+
+                            <label for="prefEmail" class="custom-radio">
+                                <input type="radio" name="contact-pref" id="prefEmail">
+                                Email
+                        </label>
+
+                        </fieldset>
+
+                        <label for="comments">Comments: <span class="required">*</span></label>
+                        <textarea id="comments"></textarea>
+                        <span id="commentError" class="hide">Comments are required</span>
                     
-                    <label for="email" class="email">Email</label>
-                    <input type="radio" id="email">
-                    
-                    <label for="phone" class="phone">Phone</label>
-                    <input type="radio" id="phone">
-                </fieldset>
+                        <input type="submit" name="mySubmit" id="mySubmit" >
+                    </form>
 
-                <label for="myComments" id="commentBox">Comments<span class="required">*</span></label>
-                <textarea name="myComments" id="myComments" rows="4" cols="40"></textarea>
-            
-                <input type="submit" id="submitForm" value="submit">
-            </form>
+                    <section id="modal2" class="hidden">
+                        <button id="close-modal2" tabindex="0">
+                                <!--Double check with Prof & Dominik -->
+                        </button>
+
+                        <h2 id="form-thanks">Thank you for your submission!</h2>
+                        <ul id="form-output">
+                        
+                        </ul>
+
+                        <p>We will get back to you in 3 - 5 business days!</p>
+                    </section>
+                </div>
+        </section>
     </main>
-    <footer class="footerStyles">
-        <p>For Educational Purposes Only</p>
-        <p>Copyright &copy; GIT417 - Kiara Yazzie</p>
+    <footer>
+        <div id="footer-background">
+            <p>For Educational Purposes Only</p>
+            <p>Copyright &copy; GIT417 - Kiara Yazzie</p>
+        </div>
     </footer>
 
 </body>
