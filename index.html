@@ -19,9 +19,9 @@
 </head>
 <body id="top" class="">
     <a href="#main" id="skip">Skip to Main Content</a>
-<header id="top">
+<header>
         <img src="images/Banner_img.jpg" alt="">
-        <h1>We are here to invade your world! With ART!</h1>
+        <h1>Poster Invasion</h1>
             <nav>
                 <h2>Main navigation</h2>
                 <ul>
@@ -42,8 +42,7 @@
     <main id="main">
         <section id="about">
             <div>
-            <h2>We come in peace...literally</h2>
-                <section>
+            <h2>We are here to invade your world! With ART!</h2>
                     <p>Poster Invasion is a woman-owned social enterprise. 
                         We work with artists all over the world to bring their work to their generation in print form. 
                         We run large-scale turnkey pop-up poster sale events on campuses with 200-35,000+ students. 
@@ -51,7 +50,6 @@
                         The first woman-owned business to successfully make it in the pop-up poster sale space. 
                         We are proudly woman-owned, and use our events to bring diversity, inclusion and representation to 
                         campuses nationwide. Poster Invasion has been certified as a Woman-Owned business by SCMBCC.</p>
-                </section>
             </div>
                 <img src="images/PosterInvation_Graphic.png" alt="Poster Invasion mascot in a UFO giving a peace sign">
         </section>
@@ -115,6 +113,7 @@
 
         <section id="game">
             <div>
+                <div id="game-background">
             <h2>Test your luck!</h2>
                 <p>Are you feeling lucky? Give us your best guess and if you guess correctly you win a mystery gift!</p>
                 <p>Enter a number between 1 and 10 into the form. A random number will generate so if your number matches, congrats!</p>
@@ -129,65 +128,69 @@
                     <span id="guess"></span>
                     <span id="randomNum"></span>
                 </section>
+                
+            </div>
+            <!-- <img src="images/Cheeky Alien RGB_Digital.webp" alt="Cheeky Alien posing"> -->
             </div>
         </section>
 
         <section id="contact">
-                <div>
-                    <h2>Join the Invasion!</h2>
-                    <p>Wanna find out when the next pop will be? Interested in learning more about us? Or do you just want more posters to cover up that hole in your wall? 
-                        If so! Leave us a message, your contact, we swear we won't abduct you! Scouts honor!</p>
+                <div id="contact-background">
+                    <div>
+                        <h2>Join the Invasion!</h2>
+                        <p>Wanna find out when the next pop will be? Interested in learning more about us? Or do you just want more posters to cover up that hole in your wall? 
+                            If so! Leave us a message, your contact, we swear we won't abduct you! Scouts honor!</p>
 
-                    <section>
-                        <h4>Follow us on our instagram for more!</h4>
-                        <a href="https://www.instagram.com/poster_invasion/"><i class="fa-brands fa-instagram" style="color:black;"></i>&nbsp;@poster_invasion</a>
-                    </section>
-                    <form id="contactRob">
-                        <label for="fName">Full Name (first and last):<span class="required">*</span></label> <!--Add RegEx in Java-->
-                        <input type="text" name="fName" id="fName">
-                        <span id="fNameError" class="hide">First and Last Name are required</span><!--full Name Error-->
+                        <section>
+                            <h4>Follow us on our instagram for more!</h4>
+                        </section>
+                        <form id="contactRob">
+                            <label for="fName">Full Name (first and last):<span class="required">*</span></label> <!--Add RegEx in Java-->
+                            <input type="text" name="fName" id="fName">
+                            <span id="fNameError" class="hide">First and Last Name are required</span><!--full Name Error-->
 
-                        <label for="number">Phone Number:<span class="required" id="telReq">*</span></label>
-                        <input type="tel" name="number" id="number">
-                        <span id="telError" class="hide">Phone number is required</span>
+                            <label for="number">Phone Number:<span class="required" id="telReq">*</span></label>
+                            <input type="tel" name="number" id="number">
+                            <span id="telError" class="hide">Phone number is required</span>
 
-                        <label for="email">Email Address:<span class="required" id="emailReq">*</span></label>
-                        <input type="email" name="email" id="email">
-                        <span id="emailError" class="hide">Phone number is required</span>
-                        
-                        <fieldset>
-                            <legend>Preferred Method of Contact</legend>
-                            <label for="prefPhone" class="custom-radio">
-                                <input type="radio" name="contact-pred" id="prefPhone" required checked>
-                                Phone
+                            <label for="email">Email Address:<span class="required" id="emailReq">*</span></label>
+                            <input type="email" name="email" id="email">
+                            <span id="emailError" class="hide">Phone number is required</span>
+                            
+                            <fieldset>
+                                <legend>Preferred Method of Contact</legend>
+                                <label for="prefPhone" class="custom-radio">
+                                    <input type="radio" name="contact-pred" id="prefPhone" required checked>
+                                    Phone
+                                </label>
+
+                                <label for="prefEmail" class="custom-radio">
+                                    <input type="radio" name="contact-pref" id="prefEmail">
+                                    Email
                             </label>
 
-                            <label for="prefEmail" class="custom-radio">
-                                <input type="radio" name="contact-pref" id="prefEmail">
-                                Email
-                        </label>
+                            </fieldset>
 
-                        </fieldset>
-
-                        <label for="comments">Comments: <span class="required">*</span></label>
-                        <textarea id="comments"></textarea>
-                        <span id="commentError" class="hide">Comments are required</span>
-                    
-                        <input type="submit" name="mySubmit" id="mySubmit" >
-                    </form>
-
-                    <section id="modal2" class="hidden">
-                        <button id="close-modal2" tabindex="0">
-                                <!--Double check with Prof & Dominik -->
-                        </button>
-
-                        <h2 id="form-thanks">Thank you for your submission!</h2>
-                        <ul id="form-output">
+                            <label for="comments">Comments: <span class="required">*</span></label>
+                            <textarea id="comments"></textarea>
+                            <span id="commentError" class="hide">Comments are required</span>
                         
-                        </ul>
+                            <input type="submit" name="mySubmit" id="mySubmit" >
+                        </form>
 
-                        <p>We will get back to you in 3 - 5 business days!</p>
-                    </section>
+                        <section id="modal2" class="hidden">
+                            <button id="close-modal2" tabindex="0">
+                                    <!--Double check with Prof & Dominik -->
+                            </button>
+
+                            <h2 id="form-thanks">Thank you for your submission!</h2>
+                            <ul id="form-output">
+                            
+                            </ul>
+
+                            <p>We will get back to you in 3 - 5 business days!</p>
+                        </section>
+                    </div>
                 </div>
         </section>
     </main>
@@ -196,5 +199,6 @@
             <p>For Educational Purposes Only</p>
             <p>Copyright &copy; GIT417 - Kiara Yazzie</p>
         </div>
+        <a href="https://www.instagram.com/poster_invasion/"><i class="fa-brands fa-instagram" style="color:black;"></i>&nbsp;@poster_invasion</a>
     </footer>
 </body>
