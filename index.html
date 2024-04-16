@@ -9,85 +9,99 @@
     <link rel="icon" href="images/Meditation_Alien.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheets" href="styles.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 <body id="top" class="">
     <a href="#main" id="skip">Skip to Main Content</a>
-<header id="header-content">
-    <img src="images/PosterInvasion_logo.png" alt="">
-    <h1>Poster Invasion</h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Campuses</li>
-                <li>Artists</li>
-                <li>Jobs</li>
-                <li><a href="#top">top</a></li>
-            </ul>
-        </nav>
+<header id="top">
+        <img src="images/Banner_img.jpg" alt="">
+        <h1>We are here to invade your world! With ART!</h1>
+            <nav>
+                <h2>Main navigation</h2>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#showcase">Showcase</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#top">top</a></li>
+                </ul>
+                
+                <!--Light/Dark modes toggles-->
+                <!-- <button aria-label="toggle light or dark mode" id="mode-toggle"> 
+                    <i class="fa-solid fa-sun currentMode" id="light"></i>
+                    <i class="fa-solid fa-moon" id="dark"></i>
+                </button>-->
+                <img src="images/moon.256x256.png" alt="Dark mode icon, Moon" id="dark">
+            </nav>
 </header>
     <main id="main">
-        <h2>We are here to invade your world! With ART!</h2>
         <section id="about">
-            <h3>We come in peace...literally</h3>
-                <p>Poster Invasion is a woman-owned social enterprise. 
-                    We work with artists all over the world to bring their work to their generation in print form. 
-                    We run large-scale turnkey pop-up poster sale events on campuses with 200-35,000+ students. 
-                    We are based in Greenville, SC and we operate in 40+ states!
-                    The first woman-owned business to successfully make it in the pop-up poster sale space. 
-                    We are proudly woman-owned, and use our events to bring diversity, inclusion and representation to 
-                    campuses nationwide. Poster Invasion has been certified as a Woman-Owned business by SCMBCC.</p>
+            <div>
+            <h2>We come in peace...literally</h2>
+                <section>
+                    <p>Poster Invasion is a woman-owned social enterprise. 
+                        We work with artists all over the world to bring their work to their generation in print form. 
+                        We run large-scale turnkey pop-up poster sale events on campuses with 200-35,000+ students. 
+                        We are based in Greenville, SC and we operate in 40+ states!
+                        The first woman-owned business to successfully make it in the pop-up poster sale space. 
+                        We are proudly woman-owned, and use our events to bring diversity, inclusion and representation to 
+                        campuses nationwide. Poster Invasion has been certified as a Woman-Owned business by SCMBCC.</p>
+                </section>
+            </div>
                 <img src="images/PosterInvation_Graphic.png" alt="Poster Invasion mascot in a UFO giving a peace sign">
         </section>
 
         <section id="showcase">
             <div id="showcase-background">
-                <h3>Your One Stop Poster Shop!</h3>
-                    <section id="alltoPiecesDisplay" class="currentProduct">
-                        <h4>All to Pieces</h4>
-                        <p>An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like 
-                            background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised
-                            into the air but head turned downward.</p>
-                        <img src="images/Allto_Pieces.png" alt="Pink, white, and teal poster with a fragmented statue reaching towards the sky">
-                    </section>
+                <h2>Your One Stop Poster Shop!</h2>
+                <section id="alltoPiecesDisplay" class="currentProduct">
+                    <h3>All to Pieces</h3>
+                    <p>An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like 
+                        background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised
+                        into the air but head turned downward.</p>
+                    <img src="images/Allto_Pieces.png" alt="Pink, white, and teal poster with a fragmented statue reaching towards the sky">
+                </section>
 
-                    <section id="floatingTreeDisplay" class="hiddenProduct">
-                    <h4>Floating Tree</h4>
-                        <p>From the tranquil forest setting with the grand island centered in the middle with a beautifully flowing waterfall
-                            descending into the valley below. Accompanying the floating island is the gorgeous red moon in the background to 
-                            add a little bit more mystery and wonder to the poster. 
-                        </p>
-                        <img src="images/Floating_Tree.png" alt="A single tree floating above a forest with a pink planet behind it">
-                    </section>
+                <section id="floatingTreeDisplay" class="hiddenProduct">
+                <h3>Floating Tree</h3>
+                    <p>From the tranquil forest setting with the grand island centered in the middle with a beautifully flowing waterfall
+                        descending into the valley below. Accompanying the floating island is the gorgeous red moon in the background to 
+                        add a little bit more mystery and wonder to the poster. 
+                    </p>
+                    <img src="images/Floating_Tree.png" alt="A single tree floating above a forest with a pink planet behind it">
+                </section>
 
-                    <section id="guidedLinesDisplay" class="hiddenProduct">
-                    <h4>Grided Lines</h4>
-                        <p>A city landscape based at the bottom of an organized skyline of guided lines coming upward from behind the planed like
-                            planets. Each line placed closely together in ways that lead the eye along the horizon with three circles with the 
-                            largest one having clouds inside. Faint but there...
-                        </p>
-                        <img src="images/Guided_lines.png" alt="Grided background with lines behind four planets with a city at the forefront">
-                    </section>
+                <section id="guidedLinesDisplay" class="hiddenProduct">
+                <h3>Grided Lines</h3>
+                    <p>A city landscape based at the bottom of an organized skyline of guided lines coming upward from behind the planed like
+                        planets. Each line placed closely together in ways that lead the eye along the horizon with three circles with the 
+                        largest one having clouds inside. Faint but there...
+                    </p>
+                    <img src="images/Guided_lines.png" alt="Grided background with lines behind four planets with a city at the forefront">
+                </section>
 
-                    <section id="kindHeartedDisplay" class="hiddenProduct">
-                        <h4>Kind Hearted</h4>
-                        <p>For kind heart this is a misplaced assumption that it represents a weakness. When in fact being kind is the opposite of
-                            weakness. Enjoy a multi colored mix of added modern touch to add to an existing renaissance painting of those who have 
-                            fallen from the sky.
-                        </p>
-                        <img src="images/Kind_heart.png" alt="A mural with a renaissance of six people reaching out for someone falling">
-                    </section>
+                <section id="kindHeartedDisplay" class="hiddenProduct">
+                    <h3>Kind Hearted</h3>
+                    <p>For kind heart this is a misplaced assumption that it represents a weakness. When in fact being kind is the opposite of
+                        weakness. Enjoy a multi colored mix of added modern touch to add to an existing renaissance painting of those who have 
+                        fallen from the sky.
+                    </p>
+                    <img src="images/Kind_heart.png" alt="A mural with a renaissance of six people reaching out for someone falling">
+                </section>
 
-                    <section id="whereIsMyMind" class="hiddenProduct">
-                        <h4>Where is My Mind</h4>
-                        <p>For a more abstract but gothic look, how about this pitch black background with a skull at the front? Because lets be real, we 
-                            all enjoy a little bit of darkness from time to time. It gives us time to think about where we misplace our heads this time!
-                        </p>
-                        <img src="images/Where_Is_My_Mind.png" alt="A skull with a black background with text saying 'Where is my mind'">
-                    </section>
-                </div>
+                <section id="whereIsMyMind" class="hiddenProduct">
+                    <h3>Where is My Mind</h3>
+                    <p>For a more abstract but gothic look, how about this pitch black background with a skull at the front? Because lets be real, we 
+                        all enjoy a little bit of darkness from time to time. It gives us time to think about where we misplace our heads this time!
+                    </p>
+                    <img src="images/Where_Is_My_Mind.png" alt="A skull with a black background with text saying 'Where is my mind'">
+                </section>
+            </div>
                 <ul id="product-control">
                     <li>
                         <button id="allToPieces" class="currentProductBtn">All to Pieces</button>
@@ -95,12 +109,13 @@
                         <button id="guidedLines" class="">Guided Lines</button>
                         <button id="kindHearted" class="">Kind Heart</button>
                         <button id="whereismyMind" class="">Guided Lines</button>
+                    </li>
                 </ul>
             </section>
 
         <section id="game">
             <div>
-            <h3>Test your luck!</h3>
+            <h2>Test your luck!</h2>
                 <p>Are you feeling lucky? Give us your best guess and if you guess correctly you win a mystery gift!</p>
                 <p>Enter a number between 1 and 10 into the form. A random number will generate so if your number matches, congrats!</p>
                 <form>
@@ -119,7 +134,7 @@
 
         <section id="contact">
                 <div>
-                    <h3>Join the Invasion!</h3>
+                    <h2>Join the Invasion!</h2>
                     <p>Wanna find out when the next pop will be? Interested in learning more about us? Or do you just want more posters to cover up that hole in your wall? 
                         If so! Leave us a message, your contact, we swear we won't abduct you! Scouts honor!</p>
 
@@ -182,5 +197,4 @@
             <p>Copyright &copy; GIT417 - Kiara Yazzie</p>
         </div>
     </footer>
-
 </body>
