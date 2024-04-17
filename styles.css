@@ -185,10 +185,11 @@ h3 {
 }
 
 #showcase h2{
-    padding-top: 15px;
+    padding-top: 22px;
     padding-bottom: 15px;
     font-weight: 500;
     text-align: center;
+    background: var(--lime-green);
 }
 
 #showcase{
@@ -196,15 +197,31 @@ h3 {
 }
 
 
-/*All to pieces design section*/
+/*Showcase styles*/
 
-/* #alltoPiecesDisplay{
-
-} */
-#alltoPiecesDisplay{
+#showcase-background section{
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    padding-right: 100px;
+    grid-column-gap: 100px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+#showcase-background section h2, #showcase-background section p{
+    grid-column: 2/3;
+}
+
+/* #showcase-background section p{
+
+} */
+
+#showcase-background section img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 300px;
 }
 
 /*Display button styling*/
@@ -272,10 +289,94 @@ h3 {
 }
 
 /*Form styles*/
-
-#contact form{
-    display: inline-block;
-    background-color: var(--white);
-    padding: 10px;
-    width: 400px;
+#contact {
+    position: relative;
+    margin: 10px;
 }
+
+#contact h2, #contact p  {
+    text-align: center;
+}
+
+#contact-background{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 5fr;
+    padding-right: 50px;
+    padding-left: 50px;
+    grid-column-gap: 100px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+#socialLink {
+    display: inline;
+    padding-bottom: 25px;
+    text-align: center;
+}
+#socialLink i{
+    font-size: 1.5em;
+    background-color: #242323;
+}
+
+#socialLink img{
+    width: 400px;
+    height: 500px;
+    padding-right: 10px;
+}
+
+/* #contact form{
+    display: inline;
+    background-color: var(--white);
+    padding-bottom: 30px;
+    width: 400px;
+}*/
+
+#contactRob label{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#contactRob input{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin-bottom: 30px;
+    padding: 2px;
+} 
+
+input.error  {
+    border: 2px solid red;
+ }
+
+
+/*Thank you pop up style*/
+
+#modal2{
+    background-color: #242323;
+    color: var(--white);
+    padding: 100px;
+    text-align: center;
+    font-size: 22px;
+}
+
+#close-modal2{
+    text-align: right;
+    background-color: var(--white);
+}
+
+
+/*Hidden Class*/
+.hide{
+    display: none;
+}
+
+/*Footer Styles*/
+ footer {
+    background-color: var(--lime-green);
+    font-family: 'Roboto Mono', regular;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;  
+ }
