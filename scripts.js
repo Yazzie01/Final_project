@@ -5,12 +5,22 @@ var icon = document.getElementById("dark")
 dark.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-        icon.src = "images/sun.256x256.png";
-    }else{
         icon.src = "images/moon.256x256.png";
+    }else{
+        icon.src = "images/sun.256x256.png";
     }
 }
 /* Display section buttons*/
+
+// let clickBtn = document.querySelector("#click button");
+// let clickP = document.querySelector("#click p");
+
+// // attach and write a handler for clicks on the button
+// clickBtn.addEventListener("click", function(){
+//     // hide/show the paragraph in this section using the 
+//    // hidden class
+//   clickP.classList.toggle("hidden");
+// });
 
 
 /*Guessing Game*/
@@ -45,9 +55,9 @@ button.addEventListener("click", function(e){
     guessingGame();
 });
 
-
-
 /* Form Validation*/
 
 
+
 /*Thank you Message pop-up*/
+

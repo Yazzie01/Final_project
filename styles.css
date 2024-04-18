@@ -72,10 +72,10 @@ body{
 }
 
 .dark-theme {
-        /*Dark mode layout*/
-        --support-color: #fff;
-        --primary-color: #6fbd48;
-        --secondary-color: #242323; 
+    /*Dark mode layout*/
+    --support-color: #fff;
+    --primary-color: #6fbd48;
+    --secondary-color: #242323; 
 }
 
 header {
@@ -181,7 +181,7 @@ h3 {
 #about div{
     margin-left: 10px;
     padding: 10px;
-    color: var(--primary-color);
+    color: var(--support-color);
     margin: 12px 80px 0 90px;
     line-height: 20px;
 }
@@ -239,7 +239,7 @@ h3 {
 /*Display button styling*/
 
 #product-control{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     gap: 10px;
     padding: 10px;
     text-align: center;
@@ -247,7 +247,7 @@ h3 {
 }
 
 #product-control button{ 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     text-transform: uppercase;
     margin-left: 25px;
     color: var(--support-color);
@@ -257,14 +257,14 @@ h3 {
 }
 #product-control button:hover, #product-control button.currentProductBtn {
     background-color: var(--support-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border-color: #242323;
 }
 
 /*Game style section*/
 
 #game{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-family:'Kanit', regular;
     font-size: 18px;
     color: var(--support-color);
