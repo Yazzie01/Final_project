@@ -12,22 +12,15 @@ dark.onclick = function(){
 }
 /* Display section buttons*/
 
-// let clickBtn = document.querySelector("#click button");
-// let clickP = document.querySelector("#click p");
-
-// // attach and write a handler for clicks on the button
-// clickBtn.addEventListener("click", function(){
-//     // hide/show the paragraph in this section using the 
-//    // hidden class
-//   clickP.classList.toggle("hidden");
-// });
-
+/*Variable categorizing section, focuses on object mapping by classifying the title, description, and image */
 let activeTitle = document.querySelector("#activePoster h3");
 let activeP = document.querySelector("#activePoster p");
 let activeImg = document.querySelector("#activePoster img");
+
+/*Targets the button control items in order to eneable user interaction */
 let buttons = document.querySelectorAll("#product-control li button");
 
-
+/*Mapping varibles for each poster output to display on the HTML through the DOM */
 let p1 = {
     title: "All to Pieces",
     dsc: "An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised into the air but head turned downward", 
@@ -56,6 +49,7 @@ let p5 = {
     imgsrc: "images/Where_Is_My_Mind.png"
 }
 
+/*On load the focus is on the p1 or Poster one for display*/
 let activePoster = p1
 
 /*Looks for active object to place class on active object*/
@@ -70,6 +64,8 @@ for(let button of buttons){
 }} 
 updateClass()
 
+/*Alternates between poster selection when button is clicked. Each connect to the variables above in order to display information
+to the DOM through the event listener */
 document.getElementById("allToPieces").addEventListener("click", function(){
     activePoster = p1
     activeTitle.innerHTML = activePoster.title;
@@ -115,9 +111,6 @@ activeP.innerHTML = activePoster.dsc;
 activeImg.src = activePoster.imgsrc;
 
 
-
-
-
 /*Guessing Game*/
 
 let button = document.getElementById("gamePlay"); /*Calls the button from the HTML page */
@@ -152,7 +145,7 @@ button.addEventListener("click", function(e){
 
 /* Form Validation*/
 
-/*Test */
+
 
 /*Thank you Message pop-up*/
 
