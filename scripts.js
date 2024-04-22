@@ -23,6 +23,8 @@ dark.onclick = function(){
 // });
 
 
+
+
 /*Guessing Game*/
 
 let button = document.getElementById("gamePlay"); /*Calls the button from the HTML page */
