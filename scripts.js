@@ -25,6 +25,8 @@ dark.onclick = function(){
 let activeTitle = document.querySelector("#activePoster h3");
 let activeP = document.querySelector("#activePoster p");
 let activeImg = document.querySelector("#activePoster img");
+let buttons = document.querySelectorAll("#product-control li button");
+
 
 let p1 = {
     title: "All to Pieces",
@@ -37,18 +39,51 @@ let p2 = {
     imgsrc: "images/Floating_Tree.png"
 }
 let p3 = {
-    title: "Grided Lines",
+    title: "Guided Lines",
     dsc: "A city landscape based at the bottom of an organized skyline of guided lines coming upward from behind the planed like planets. Each line placed closely together in ways that lead the eye along the horizon with three circles with the largest one having clouds inside Faint but there...",
     imgsrc: "images/Guided_lines.png"
 }
 
+let p4 = {
+    title: "Kind Hearted",
+    dsc: "For kind heart this is a misplaced assumption that it represents a weakness. When in fact being kind is the opposite of weakness. Enjoy a multi colored mix of added modern touch to add to an existing renaissance painting of those who have fallen from the sky..",
+    imgsrc: "images/Kind_heart.png"
+}
+
+let p5 = {
+    title: "Where is My Mind",
+    dsc: "For a more abstract but gothic look, how about this pitch black background with a skull at the front? Because lets be real, we all enjoy a little bit of darkness from time to time. It gives us time to think about where we misplace our heads this time!",
+    imgsrc: "images/Where_Is_My_Mind.png"
+}
+
 let activePoster = p1
+
+/*Looks for active object to place class on active object*/
+
+function updateClass(){
+for(let button of buttons){
+    if(activePoster.title.toLowerCase().trim() == button.textContent.toLowerCase().trim()){
+        button.classList.add("currentProductBtn");
+    }else{
+        button.classList.remove("currentProductBtn");
+    }
+}} 
+updateClass()
+
+document.getElementById("allToPieces").addEventListener("click", function(){
+    activePoster = p1
+    activeTitle.innerHTML = activePoster.title;
+    activeP.innerHTML = activePoster.dsc;
+    activeImg.src = activePoster.imgsrc;
+    updateClass()
+})
 
 document.getElementById("floatingTree").addEventListener("click", function(){
     activePoster = p2
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
+    updateClass()
 })
 
 document.getElementById("guidedLines").addEventListener("click", function(){
@@ -56,8 +91,24 @@ document.getElementById("guidedLines").addEventListener("click", function(){
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
+    updateClass()
 })
 
+document.getElementById("kindHearted").addEventListener("click", function(){
+    activePoster = p4
+    activeTitle.innerHTML = activePoster.title;
+    activeP.innerHTML = activePoster.dsc;
+    activeImg.src = activePoster.imgsrc;
+    updateClass()
+})
+
+document.getElementById("whereismyMind").addEventListener("click", function(){
+    activePoster = p5
+    activeTitle.innerHTML = activePoster.title;
+    activeP.innerHTML = activePoster.dsc;
+    activeImg.src = activePoster.imgsrc;
+    updateClass()
+})
 
 activeTitle.innerHTML = activePoster.title;
 activeP.innerHTML = activePoster.dsc;
