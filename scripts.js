@@ -22,6 +22,48 @@ dark.onclick = function(){
 //   clickP.classList.toggle("hidden");
 // });
 
+let activeTitle = document.querySelector("#activePoster h3");
+let activeP = document.querySelector("#activePoster p");
+let activeImg = document.querySelector("#activePoster img");
+
+let p1 = {
+    title: "All to Pieces",
+    dsc: "An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised into the air but head turned downward", 
+    imgsrc: "images/Allto_Pieces.png"
+} 
+let p2 = {
+    title: "Floating Tree",
+    dsc: "From the tranquil forest setting with the grand island centered in the middle with a beautifully flowing waterfall descending into the valley below. Accompanying the floating island is the gorgeous red moon in the background to add a little bit more mystery and wonder to the poster.", 
+    imgsrc: "images/Floating_Tree.png"
+}
+let p3 = {
+    title: "Grided Lines",
+    dsc: "A city landscape based at the bottom of an organized skyline of guided lines coming upward from behind the planed like planets. Each line placed closely together in ways that lead the eye along the horizon with three circles with the largest one having clouds inside Faint but there...",
+    imgsrc: "images/Guided_lines.png"
+}
+
+let activePoster = p1
+
+document.getElementById("floatingTree").addEventListener("click", function(){
+    activePoster = p2
+    activeTitle.innerHTML = activePoster.title;
+    activeP.innerHTML = activePoster.dsc;
+    activeImg.src = activePoster.imgsrc;
+})
+
+document.getElementById("guidedLines").addEventListener("click", function(){
+    activePoster = p3
+    activeTitle.innerHTML = activePoster.title;
+    activeP.innerHTML = activePoster.dsc;
+    activeImg.src = activePoster.imgsrc;
+})
+
+
+activeTitle.innerHTML = activePoster.title;
+activeP.innerHTML = activePoster.dsc;
+activeImg.src = activePoster.imgsrc;
+
+
 
 
 
