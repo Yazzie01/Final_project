@@ -158,6 +158,12 @@ let prefEmail = document.getElementById("prefEmail");
 let comments = document.getElementById("comments");
 let submit = document.getElementById("mySubmit")
 
+let e = document.getElementById("");
+
+
+/*Regex for input validation*/
+let fNameRegex = /^(?=.+\d)(?=.+[a-zA-Z]).{6,}$/g;
+let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
 
 /*Thank you Message pop-up*/
 
