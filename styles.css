@@ -348,19 +348,40 @@ h3 {
 
 #contactRob label{
     font-size: 20px;
-    padding-bottom: 10px;
+    display: grid;
 }
 
 #contactRob input{
-    width: 200px;
+    width: 275px;
     height: 30px;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 2px;
+    margin-top: 2px;
 } 
+
+#prefPhone {
+    color: #6fbd48;
+}
+
+#comments {
+    padding: 10px;
+    width: 265px;
+    height: 75px;
+    margin-top: 5px;
+}
+
+#mysubmit {
+    margin-top: 20px;
+}
+
+#contact [class~=custom-radio]  {
+    display: block;
+}
 
 input.error  {
     border: 2px solid red;
+    display: block;
  }
 
 

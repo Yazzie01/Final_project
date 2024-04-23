@@ -145,6 +145,18 @@ button.addEventListener("click", function(e){
 
 /* Form Validation*/
 
+function validateForm(event){
+    event.preventDefault();
+}
+
+let fullName = document.getElementById("fName");
+let phone = document.getElementById("number");
+let email = document.getElementById("email");
+let fieldset = document.querySelector("fieldset");
+let prefPhone = document.getElementById("prefPhone");
+let prefEmail = document.getElementById("prefEmail");
+let comments = document.getElementById("comments");
+let submit = document.getElementById("mySubmit")
 
 
 /*Thank you Message pop-up*/
