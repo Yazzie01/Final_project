@@ -147,7 +147,6 @@ button.addEventListener("click", function(e){
 
 function validateForm(event){
     event.preventDefault();
-}
 
 let fullName = document.getElementById("fName");
 let phone = document.getElementById("number");
@@ -165,5 +164,21 @@ let e = document.getElementById("");
 let fNameRegex = /^(?=.+\d)(?=.+[a-zA-Z]).{6,}$/g;
 let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
 
+/*resets input style errors */
+fullName.classList.remove("error");
+phone.classList.remove("error");
+email.classList.remove("error");
+
+
+/*Hides previous input elements*/
+fullName.nextElementSibling.classList.add("hide");
+phone.nextElementSibling.classList.add("hide");
+email.nextElementSibling.classList.add("hide");
+
+
+
+
+
+}
 /*Thank you Message pop-up*/
 

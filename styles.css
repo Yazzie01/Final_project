@@ -352,11 +352,12 @@ h3 {
 }
 
 #contactRob input{
+    display: block;
     width: 275px;
     height: 30px;
-    display: block;
-    margin-bottom: 20px;
     padding: 2px;
+    padding-left: 18px;
+    margin-bottom: 20px;
     margin-top: 2px;
 } 
 
@@ -365,18 +366,21 @@ h3 {
 }
 
 #comments {
-    padding: 10px;
-    width: 265px;
+    padding: 15px;
+    width: 275px;
     height: 75px;
     margin-top: 5px;
 }
 
-#mysubmit {
-    margin-top: 20px;
-}
-
 #contact [class~=custom-radio]  {
     display: block;
+}
+
+.required {
+    color: var(--secondary-color);
+    display: contents;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 input.error  {
@@ -404,6 +408,7 @@ input.error  {
 /*Hidden Class*/
 .hide{
     display: none;
+    margin: 2px;
 }
 
 /*Footer Styles*/
