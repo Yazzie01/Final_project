@@ -6,6 +6,7 @@
     <meta name="author" content="Kiara Yazzie">
     <meta name="description" content="Final Project for Poster invasion website">
     <!--Favicon-->
+    <!--All graphic elements were taken from the offical Poster Invasion website - Here: https://www.posterinvasion.com/-->
     <link rel="icon" href="images/Meditation_Alien.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +31,7 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#top">top</a></li>
                 </ul>
+                <!--Icon image taken from Here: -->
                 <img src="images/sun.256x256.png" alt="Dark mode icon, Moon" id="dark">
             </nav>
         </header> 
@@ -52,9 +54,9 @@
             <div id="showcase-background">
                 <h2>Your One Stop Poster Shop!</h2>
                 <section id="activePoster" class="currentProduct">
-                    <h3></h3>
-                    <p></p>
-                    <img src="" alt="Pink, white, and teal poster with a fragmented statue reaching towards the sky">
+                    <h3>All to Pieces</h3>
+                    <p>An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised into the air but head turned downward</p>
+                    <img src="images/Allto_Pieces.png" alt="Pink, white, and teal poster with a fragmented statue reaching towards the sky">
                 </section>
             </div>
                 <ul id="product-control">
@@ -117,7 +119,7 @@
                             <fieldset>
                                 <legend>Preferred Method of Contact</legend>
                                 <label for="prefPhone" class="custom-radio">
-                                    <input type="radio" name="contact-pred" id="prefPhone" required checked>
+                                    <input type="radio" name="contact-pref" id="prefPhone" required checked>
                                     Phone
                                 </label>
 
@@ -132,8 +134,8 @@
                             <textarea id="comments"></textarea>
                             <span id="commentError" class="hide">Comments are required</span>
                         
-                            <input type="submit" name="mySubmit" id="mySubmit" >
-                            <div id="formErrors"></div>
+                            <button type="submit" name="mySubmit" id="mySubmit" >Submit</button>
+                            <ul id="formErrors"></ul>
                         </form>
 
 

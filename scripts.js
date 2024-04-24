@@ -21,6 +21,7 @@ let activeImg = document.querySelector("#activePoster img");
 let buttons = document.querySelectorAll("#product-control li button");
 
 /*Mapping varibles for each poster output to display on the HTML through the DOM */
+/*Added to HTML for h3 and p to run through validator, add alt in imgscr */
 let p1 = {
     title: "All to Pieces",
     dsc: "An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised into the air but head turned downward", 
@@ -139,47 +140,102 @@ function guessingGame(){
 }
 /*Listens to the event of a click when value is entered into the input*/
 button.addEventListener("click", function(e){
-    e.preventDefault();
+    
     guessingGame();
 });
 
 /* Form Validation*/
 
-function validateForm(event){
-    event.preventDefault();
-
-let fullName = document.getElementById("fName");
-let phone = document.getElementById("number");
-let email = document.getElementById("email");
-let fieldset = document.querySelector("fieldset");
-let prefPhone = document.getElementById("prefPhone");
-let prefEmail = document.getElementById("prefEmail");
-let comments = document.getElementById("comments");
-let submit = document.getElementById("mySubmit")
-
-let e = document.getElementById("");
+let form = document.getElementById("contactRob");
+let submitBtn = document.getElementById("mySubmit");
 
 
-/*Regex for input validation*/
-let fNameRegex = /^(?=.+\d)(?=.+[a-zA-Z]).{6,}$/g;
-let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
+submitBtn.addEventListener("click", function(e){
+    e.preventDefault();
 
-/*resets input style errors */
-fullName.classList.remove("error");
-phone.classList.remove("error");
-email.classList.remove("error");
-comments.classList.remove("error");
+    let fullName = document.getElementById("fName");
+    let phone = document.getElementById("number");
+    let email = document.getElementById("email");
+    let fieldset = document.querySelector("fieldset");
+    let prefPhone = document.getElementById("prefPhone");
+    let prefEmail = document.getElementById("prefEmail");
+    let comments = document.getElementById("comments");
+    let errorList = document.getElementById("formErrors");
+    // let submit = document.getElementById("mySubmit");
+    
+    // let e = document.getElementById("");
+    
+    
+    /*Regex for input validation*/
+    let fNameRegex = new RegExp(/^(?:(\w+-?\w+)) (?:(\w+))(?: (\w+))?$/g);
+    let emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/);
+    let phoneRegex = new RegExp(/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/gm);
+    
+    /*resets input style errors */
+    fullName.classList.remove("error");
+    phone.classList.remove("error");
+    email.classList.remove("error");
+    comments.classList.remove("error");
+    errorList.innerHTML = "";
+    
+    
+    /*Hides previous input elements*/
+    fullName.nextElementSibling.classList.add("hide");
+    phone.nextElementSibling.classList.add("hide");
+    email.nextElementSibling.classList.add("hide");
+    
+    if(fullName.value == ""){
+        fullName.classList.add("error");
+        let li = document.createElement("li");
+        li.innerHTML = "Enter a full name";
+        errorList.appendChild(li);
+    }
+    
+    if(fNameRegex.test(fullName.value) == false){
+        fullName.classList.add("error");
+    }
 
+    if(prefEmail.checked){
+        if(email.value ==  "" || emailRegex.test(email.value) == false){
+            email.classList.add("error");
+            let li = document.createElement("li");
+            li.innerHTML = "Enter a valid email";
+            errorList.appendChild(li);
+        }
+    }
 
-/*Hides previous input elements*/
-fullName.nextElementSibling.classList.add("hide");
-phone.nextElementSibling.classList.add("hide");
-email.nextElementSibling.classList.add("hide");
+    if(prefPhone.checked){
+        if(phone.value == "" || phoneRegex.test(phone.value) == false){
+            phone.classList.add("error");
+            let li = document.createElement("li");
+            li.innerHTML = "Enter a phone number";
+            errorList.appendChild(li);
+        }
+    }
+    
+    if(comments.value == ""){
+        comments.classList.add("error");
+        let li = document.createElement("li");
+        li.innerHTML = "Please enter a comment";
+        errorList.appendChild(li);
+    }
 
+    if(errorList.innerHTML == ""){
+        let formInfo = {
+            fullName: fullName.value, 
+            email: email.value,
+            phone: phone.value,
+            comments: comments.value
+        }
 
-
-
-
+        // alert(formInfo.fullName, formInfo.email, formInfo.phone, formInfo.comments);
+        if(prefPhone.checked){
+            {alert(`Thank you for your submission: ${formInfo.fullName}. You're phone number is: ${formInfo.phone}. You left this comment ${formInfo.comments}`)}
+        }else{
+            {alert(`Thank you for your submission: ${formInfo.fullName}. You're email is: ${formInfo.email}. You left this comment: ${formInfo.comments}`)}
+        }
 }
-/*Thank you Message pop-up*/
+}
 
+/*Thank you Message pop-up*/
+)
