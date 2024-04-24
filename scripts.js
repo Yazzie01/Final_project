@@ -168,6 +168,7 @@ let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
 fullName.classList.remove("error");
 phone.classList.remove("error");
 email.classList.remove("error");
+comments.classList.remove("error");
 
 
 /*Hides previous input elements*/

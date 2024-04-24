@@ -339,27 +339,37 @@ h3 {
     padding-right: 10px;
 }
 
-/* #contact form{
-    display: inline;
+#contact form{
     background-color: var(--support-color);
     padding-bottom: 30px;
     width: 400px;
-}*/
+    margin-left: 75px;
+}
 
 #contactRob label{
     font-size: 20px;
     display: grid;
 }
 
-#contactRob input{
+#contactRob form{
     display: block;
-    width: 275px;
-    height: 30px;
+    margin: 10px;
     padding: 2px;
-    padding-left: 18px;
-    margin-bottom: 20px;
-    margin-top: 2px;
 } 
+
+#contactRob input{
+    margin: 10px;
+    width: 25px;
+    height: 30px;
+    padding: 4px;
+    padding-left: 125px;
+    padding-right: 175px;
+}
+
+fieldset input{
+    transform: translateY(4px);
+
+}
 
 #prefPhone {
     color: #6fbd48;
