@@ -184,6 +184,9 @@ submitBtn.addEventListener("click", function(e){
     phone.nextElementSibling.classList.add("hide");
     email.nextElementSibling.classList.add("hide");
     
+    /*Function to clear out inputs */
+    let isValid = true;
+
     if(fullName.value == ""){
         fullName.classList.add("error");
         let li = document.createElement("li");
@@ -226,15 +229,27 @@ submitBtn.addEventListener("click", function(e){
             email: email.value,
             phone: phone.value,
             comments: comments.value
+
+            
         }
-        /*Thank you Message pop-up*/
+
+        if(isValid){        
+            // reset values of inputs/clear them out
+            fullName.value = "";
+            email.value = "";
+            phone.value = "";
+            prefPhone.checked = true;  
+            comments.value = "";
+         /*Thank you Message pop-up*/
         if(prefPhone.checked){
             {alert(`Thank you for your submission: ${formInfo.fullName}. You're phone number is: ${formInfo.phone}. You left this comment ${formInfo.comments}`)}
         }else{
             {alert(`Thank you for your submission: ${formInfo.fullName}. You're email is: ${formInfo.email}. You left this as a comment: ${formInfo.comments}`)}
         }
-}
+        }
 }
 
+}
 
 )
+

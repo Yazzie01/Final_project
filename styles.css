@@ -347,6 +347,8 @@ h3 {
 }
 
 #contactRob label{
+    margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 20px;
     display: grid;
 }
@@ -358,28 +360,74 @@ h3 {
 } 
 
 #contactRob input{
-    height: 30px;
-    padding: 4px;
-    padding-right: 158px;
+    background-color: #F6F6F6;
+    border-color: var(--primary-color);
+    border-width: 3px;
+}
+
+#fName{
+    width: 300px;
+    height: 28px;
+}
+#number{
+    width: 300px;
+    height: 28px;
+}
+#email{
+    width: 300px;
+    height: 28px;
+}
+
+#contactRob fieldset{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#contactRob fieldset [class~=custom-radio] {
+    display: inline;
 }
 
 fieldset input{
-    transform: translateY(4px);
+    width: 25px; 
+    height: 25px;
+    margin-top: 15px;
+    transform: translateY(2px);
 }
 
-#prefPhone {
-    color: #6fbd48;
-}
 
 #comments {
     padding: 15px;
     width: 275px;
     height: 75px;
     margin-top: 5px;
+    background-color: #F6F6F6;
+    border-color: var(--primary-color);
+    border-width: 3px;
 }
 
 #contact [class~=custom-radio]  {
     display: block;
+}
+
+#mySubmit{
+    display: grid;
+    margin: 10px;
+    margin-left: 55px;
+    padding: 6px;
+    width: 200px;
+}
+
+#formErrors {
+    margin-top: 10px;
+}
+
+#formErrors li{
+    font-family: 'Kanit', regular;
+    font-size: 16px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-right: 85px;
+    margin-top: 2px;
 }
 
 .required {
