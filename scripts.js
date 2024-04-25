@@ -1,7 +1,8 @@
 "use strict";
 
 /* Dark Mode*/
-let icon = document.getElementById("dark")
+let icon = document.getElementById("dark");
+
 dark.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
@@ -21,7 +22,6 @@ let activeImg = document.querySelector("#activePoster img");
 let buttons = document.querySelectorAll("#product-control li button");
 
 /*Mapping varibles for each poster output to display on the HTML through the DOM */
-/*Added to HTML for h3 and p to run through validator, add alt in imgscr */
 let p1 = {
     title: "All to Pieces",
     dsc: "An intricate poster with soft pastels from baby pink to mint green with soft blues and white oil like background. The main center piece is the renaissance marble statue fragmented into pieces with one hand raised into the air but head turned downward", 
@@ -51,7 +51,7 @@ let p5 = {
 }
 
 /*On load the focus is on the p1 or Poster one for display*/
-let activePoster = p1
+let activePoster = p1;
 
 /*Looks for active object to place class on active object*/
 
@@ -63,48 +63,48 @@ for(let button of buttons){
         button.classList.remove("currentProductBtn");
     }
 }} 
-updateClass()
+updateClass();
 
 /*Alternates between poster selection when button is clicked. Each connect to the variables above in order to display information
 to the DOM through the event listener */
 document.getElementById("allToPieces").addEventListener("click", function(){
-    activePoster = p1
+    activePoster = p1;
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
-    updateClass()
+    updateClass();
 })
 
 document.getElementById("floatingTree").addEventListener("click", function(){
-    activePoster = p2
+    activePoster = p2;
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
-    updateClass()
+    updateClass();
 })
 
 document.getElementById("guidedLines").addEventListener("click", function(){
-    activePoster = p3
+    activePoster = p3;
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
-    updateClass()
+    updateClass();
 })
 
 document.getElementById("kindHearted").addEventListener("click", function(){
-    activePoster = p4
+    activePoster = p4;
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
-    updateClass()
+    updateClass();
 })
 
 document.getElementById("whereismyMind").addEventListener("click", function(){
-    activePoster = p5
+    activePoster = p5;
     activeTitle.innerHTML = activePoster.title;
     activeP.innerHTML = activePoster.dsc;
     activeImg.src = activePoster.imgsrc;
-    updateClass()
+    updateClass();
 })
 
 activeTitle.innerHTML = activePoster.title;
@@ -120,8 +120,8 @@ function guessingGame(){
     /*Variables connecting to the HTML elements through id selection*/
     let inputDisplay = document.getElementById("userGuess");
     let gameMessage = document.getElementById("gameMsg");
-    let randNumFrom0To1 = Math.random()
-    let randNumberToTen = Math.floor(randNumFrom0To1 *10)+1;
+    let randNumFrom0To1 = Math.random();
+    let randNumberToTen = Math.floor(randNumFrom0To1 * 10)+ 1;
     let userGuess = inputDisplay.value;
 
     /*Game function layout. Starting form user guess and calculated between 1 - 10*/
@@ -129,9 +129,9 @@ function guessingGame(){
         alert("Please enter a number between 1 and 10"); 
     }else{
         if (randNumberToTen === parseInt(userGuess)){
-            gameMessage.innerHTML = `Congrats you got it right! Your answer was ${userGuess} and the correct answer was ${randNumberToTen}`
+            gameMessage.innerHTML = `Congrats you got it right! Your answer was ${userGuess} and the correct answer was ${randNumberToTen}`;
         }else{
-            gameMessage.innerHTML = `Sorry, about that! You guessed ${userGuess} and the correct answer was ${randNumberToTen}`
+            gameMessage.innerHTML = `Sorry, about that! You guessed ${userGuess} and the correct answer was ${randNumberToTen}`;
         } 
 }
 /*Displayed in the console in order to test responses*/
@@ -140,7 +140,7 @@ function guessingGame(){
 }
 /*Listens to the event of a click when value is entered into the input*/
 button.addEventListener("click", function(e){
-    
+    e.preventDefault();
     guessingGame();
 });
 
@@ -161,10 +161,6 @@ submitBtn.addEventListener("click", function(e){
     let prefEmail = document.getElementById("prefEmail");
     let comments = document.getElementById("comments");
     let errorList = document.getElementById("formErrors");
-    // let submit = document.getElementById("mySubmit");
-    
-    // let e = document.getElementById("");
-    
     
     /*Regex for input validation*/
     let fNameRegex = new RegExp(/^(?:(\w+-?\w+)) (?:(\w+))(?: (\w+))?$/g);
@@ -193,11 +189,9 @@ submitBtn.addEventListener("click", function(e){
         li.innerHTML = "Enter a full name";
         errorList.appendChild(li);
     }
-    
     if(fNameRegex.test(fullName.value) == false){
         fullName.classList.add("error");
     }
-
     if(prefEmail.checked){
         if(email.value ==  "" || emailRegex.test(email.value) == false){
             email.classList.add("error");
@@ -206,7 +200,6 @@ submitBtn.addEventListener("click", function(e){
             errorList.appendChild(li);
         }
     }
-
     if(prefPhone.checked){
         if(phone.value == "" || phoneRegex.test(phone.value) == false){
             phone.classList.add("error");
@@ -215,22 +208,18 @@ submitBtn.addEventListener("click", function(e){
             errorList.appendChild(li);
         }
     }
-    
     if(comments.value == ""){
         comments.classList.add("error");
         let li = document.createElement("li");
         li.innerHTML = "Please enter a comment";
         errorList.appendChild(li);
     }
-
     if(errorList.innerHTML == ""){
         let formInfo = {
             fullName: fullName.value, 
             email: email.value,
             phone: phone.value,
             comments: comments.value
-
-            
         }
         if(isValid){        
             // reset values of inputs/clear them out
@@ -241,9 +230,9 @@ submitBtn.addEventListener("click", function(e){
             comments.value = "";
          /*Thank you Message pop-up*/
         if(prefPhone.checked){
-            {alert(`Thank you for your submission: ${formInfo.fullName}. You're phone number is: ${formInfo.phone}. You left this comment ${formInfo.comments}`)}
+            {alert(`Thank you for your submission: ${formInfo.fullName}. You're phone number is: ${formInfo.phone}. You left this comment ${formInfo.comments}`)};
         }else{
-            {alert(`Thank you for your submission: ${formInfo.fullName}. You're email is: ${formInfo.email}. You left this as a comment: ${formInfo.comments}`)}
+            {alert(`Thank you for your submission: ${formInfo.fullName}. You're email is: ${formInfo.email}. You left this as a comment: ${formInfo.comments}`)};
         }
         }
 }

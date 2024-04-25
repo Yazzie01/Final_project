@@ -71,8 +71,9 @@ body{
     margin: 0 auto;
 }
 
+/*Dark mode layout*/
 .dark-theme {
-    /*Dark mode layout*/
+    
     --support-color: #fff;
     --primary-color: #6fbd48;
     --secondary-color: #242323; 
@@ -97,7 +98,6 @@ nav {
     text-align: right;
     margin-left: 550px;
     text-transform: capitalize;
-    /* transform: translateY(-70px); */
 }
 nav li{
     display: inline-flex;
@@ -441,23 +441,6 @@ fieldset input{
     border: 2px solid red;
     display: block;
  }
-
-
-/*Thank you pop up style*/
-
-#modal2{
-    background-color: var(--secondary-color);
-    color: var(--support-color);
-    padding: 100px;
-    text-align: center;
-    font-size: 22px;
-}
-
-#close-modal2{
-    text-align: right;
-    background-color: var(--support-color);
-}
-
 
 /*Footer Styles*/
  footer {
