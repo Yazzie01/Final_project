@@ -358,17 +358,13 @@ h3 {
 } 
 
 #contactRob input{
-    margin: 10px;
-    width: 25px;
     height: 30px;
     padding: 4px;
-    padding-left: 125px;
-    padding-right: 175px;
+    padding-right: 158px;
 }
 
 fieldset input{
     transform: translateY(4px);
-
 }
 
 #prefPhone {
@@ -414,12 +410,6 @@ fieldset input{
     background-color: var(--support-color);
 }
 
-
-/*Hidden Class*/
-.hide{
-    display: none;
-    margin: 2px;
-}
 
 /*Footer Styles*/
  footer {
