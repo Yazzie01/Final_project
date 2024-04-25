@@ -232,7 +232,6 @@ submitBtn.addEventListener("click", function(e){
 
             
         }
-
         if(isValid){        
             // reset values of inputs/clear them out
             fullName.value = "";
@@ -248,7 +247,6 @@ submitBtn.addEventListener("click", function(e){
         }
         }
 }
-
 }
 
 )
