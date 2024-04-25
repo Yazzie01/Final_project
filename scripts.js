@@ -117,22 +117,28 @@ activeImg.src = activePoster.imgsrc;
 let button = document.getElementById("gamePlay"); /*Calls the button from the HTML page */
 
 function guessingGame(){
+        
     /*Variables connecting to the HTML elements through id selection*/
     let inputDisplay = document.getElementById("userGuess");
     let gameMessage = document.getElementById("gameMsg");
     let randNumFrom0To1 = Math.random()
-    let randNumberToTen = Math.floor(randNumFrom0To1 *10)+1;
+    let randNumberToTen = Math.floor(randNumFrom0To1 *10) + 1;
     let userGuess = inputDisplay.value;
-
+    
+    e.preventDefault();
     /*Game function layout. Starting form user guess and calculated between 1 - 10*/
     if(parseInt(userGuess) > 10 || parseInt(userGuess) < 1){
         alert("Please enter a number between 1 and 10"); 
+
     }else{
         if (randNumberToTen === parseInt(userGuess)){
             gameMessage.innerHTML = `Congrats you got it right! Your answer was ${userGuess} and the correct answer was ${randNumberToTen}`
         }else{
             gameMessage.innerHTML = `Sorry, about that! You guessed ${userGuess} and the correct answer was ${randNumberToTen}`
-        } 
+        }
+    if(guessingGame.value == ""){
+            alert(`Please Enter a number between 1 and 10`);
+    }
 }
 /*Displayed in the console in order to test responses*/
     console.log(userGuess);
@@ -140,9 +146,12 @@ function guessingGame(){
 }
 /*Listens to the event of a click when value is entered into the input*/
 button.addEventListener("click", function(e){
-    
     guessingGame();
 });
+
+
+
+
 
 /* Form Validation*/
 
@@ -156,7 +165,6 @@ submitBtn.addEventListener("click", function(e){
     let fullName = document.getElementById("fName");
     let phone = document.getElementById("number");
     let email = document.getElementById("email");
-    let fieldset = document.querySelector("fieldset");
     let prefPhone = document.getElementById("prefPhone");
     let prefEmail = document.getElementById("prefEmail");
     let comments = document.getElementById("comments");
@@ -227,7 +235,7 @@ submitBtn.addEventListener("click", function(e){
             phone: phone.value,
             comments: comments.value
         }
-
+        /*Thank you Message pop-up*/
         // alert(formInfo.fullName, formInfo.email, formInfo.phone, formInfo.comments);
         if(prefPhone.checked){
             {alert(`Thank you for your submission: ${formInfo.fullName}. You're phone number is: ${formInfo.phone}. You left this comment ${formInfo.comments}`)}
@@ -236,6 +244,4 @@ submitBtn.addEventListener("click", function(e){
         }
 }
 }
-
-/*Thank you Message pop-up*/
 )
